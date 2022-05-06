@@ -3,9 +3,8 @@ package com.myorg.optionals;
 import com.myorg.optionals.common.Person;
 
 public class OptionalPracticalDemo {
-
     public static void main(String[] args) {
-        // Scenario 1 - When the emial is null -------------------------------------------------------------------------
+        // Scenario 1 - When the email is null -------------------------------------------------------------------------
         Person person1 = new Person("james", null);
 
         String person1Email = person1
@@ -15,7 +14,8 @@ public class OptionalPracticalDemo {
 
         System.out.println(person1Email); // EMAIL_NOT_AVAILABLE
 
-        // Scenario 2 - When the emial is available/present -------------------------------------------------------------
+
+        // Scenario 2 - When the email is available/present -------------------------------------------------------------
         Person person2 = new Person("jakson", "JAKSON@OUTLOOK.COM");
 
         String person2Email = person2.getEmail().map(String::toLowerCase).orElse("EMAIL_NOT_AVAILABLE");
